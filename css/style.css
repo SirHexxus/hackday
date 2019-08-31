@@ -1,3 +1,27 @@
 body {
     text-align: center;
 }
+
+#game-info {
+    border: 1px solid red;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+#life-counter-container {
+    border: 1px solid black;
+    flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+#score-counter-container {
+    border: 1px solid green;
+    flex: 1;
+}
+
+#character-profile-container {
+    border: 1px solid blue;
+    flex: 1;
+}
