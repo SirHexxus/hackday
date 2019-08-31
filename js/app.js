@@ -63,7 +63,7 @@ class Player extends Populate {
         console.log("Lives left: " + this.lives);
         this.reset();
 
-        if (this.lives === 0) {
+        if (this.lives <= 0) {
           //Show game over screen
           alert("Game over");
         }
