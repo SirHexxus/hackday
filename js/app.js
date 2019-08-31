@@ -100,10 +100,17 @@ allEnemies.push(enemy1, enemy2, enemy3, enemy4);
 // Player.handleInput() method. You don't need to modify this.
 document.addEventListener("keyup", function (e) {
   var allowedKeys = {
+    65: "left",
     37: "left",
+    
+    87: "up",
     38: "up",
+      
+    68: "right",
     39: "right",
-    40: "down"
+      
+    83: "down",
+    40: "down",
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
