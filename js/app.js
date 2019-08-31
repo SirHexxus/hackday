@@ -26,6 +26,7 @@ class Player extends Populate {
     this.x = 0;
     this.y = 415;
     this.sprite = "images/char-boy.png";
+    this.lives = 5;
   }
 
 //key input for Player
@@ -58,7 +59,14 @@ class Player extends Populate {
   update () {
     for (let enemy of allEnemies) {
       if (this.y === enemy.y && (enemy.x + enemy.sideways / 2 > this.x && enemy.x < this.x + this.sideways / 2)) {
+        this.lives--;
+        console.log("Lives left: " + this.lives);
         this.reset();
+
+        if (this.lives === 0) {
+          //Show game over screen
+          alert("Game over");
+        }
       }
     }
   }
