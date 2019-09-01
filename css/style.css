@@ -27,7 +27,7 @@ body {
 }
 
 .is-hidden {
-    display: none;
+    display: none !important;
   }
   
   .button-close {
@@ -64,10 +64,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #fff;
   }
 
   .game-over {
-      color: #fff;
       font-size: 48px;
   }
 

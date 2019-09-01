@@ -19,7 +19,7 @@ var Engine = (function (global) {
   doc.body.appendChild(canvas);
   var modal = new Modal(document.querySelector('.modal-overlay'), canvas);
 
-  modal.open();
+  // modal.open(screenTemplates.newLevel);
 
   /* This function serves as the kickoff point for the game loop itself
    * and handles properly calling the update and render methods.
