@@ -4,7 +4,16 @@ class Player extends Populate {
     super();
     this.x = 0;
     this.y = 415;
-    this.sprite = "images/char-boy.png";
+    this.sprites = [
+      "images/char-boy.png",
+      "images/char-cat-girl.png",
+      "images/char-horn-girl.png",
+      "images/char-pink-girl.png",
+      "images/char-princess-girl.png"
+    ],
+    this.round = 0;
+    this.wins = [];
+    this.sprite = this.sprites[this.round % this.sprites.length];
     this.lives = 5;
   }
 
@@ -25,6 +34,15 @@ class Player extends Populate {
         case "up":
           if (this.y >= 83) {
             this.y -= this.upDown;
+          } else if (this.y === 0) {
+            //You win!!!
+            //Get x and check if the player has already won that space
+            if(this.wins.indexOf(this.x) < 0) {
+              this.wins.push(this.x);
+              this.round++;
+              this.sprite = this.sprites[this.round % this.sprites.length];
+              this.reset();
+            }
           }
           break;
         case "down":
