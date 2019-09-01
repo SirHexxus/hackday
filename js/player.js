@@ -51,7 +51,7 @@ class Player extends Populate {
     for (let enemy of allEnemies) {
       if (this.y === enemy.y && (enemy.x + enemy.sideways / 2 > this.x && enemy.x < this.x + this.sideways / 2)) {
         this.lives--;
-        console.log("Lives left: " + this.lives);
+        document.getElementById("life-counter").innerText = this.lives;
         this.reset();
 
         if (this.lives === 0) {
