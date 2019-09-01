@@ -92,8 +92,8 @@ Vanilla Javascript
 - 
 
 ### Participants
-- James Stacy
-- Rebecca Hom
-- Tyrice Clark
-- Spencer Trumbore
-- Justin Teeter
+- James Stacy - Logical Design/UI
+- Rebecca Hom - Backend Logic
+- Tyrice Clark - UI Master
+- Spencer Trumbore - Backend Logic
+- Justin Teeter - Logical Design
