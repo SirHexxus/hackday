@@ -4,15 +4,8 @@ class Player extends Populate {
     super();
     this.x = 0;
     this.y = 415;
-    this.sprites = [
-      "images/char-boy.png",
-      "images/char-cat-girl.png",
-      "images/char-horn-girl.png",
-      "images/char-pink-girl.png",
-      "images/char-princess-girl.png"
-    ],
     this.round = 0;
-    this.sprite = this.sprites[this.round % this.sprites.length];
+    this.sprite = sprites[this.round % sprites.length];
     this.lives = 5;
   }
 
@@ -71,7 +64,7 @@ class Player extends Populate {
     if (occupied.indexOf(this.x) < 0 && this.y === 0) {
       occupied.push(this.x);
       this.round++;
-      this.sprite = this.sprites[this.round % this.sprites.length];
+      this.sprite = sprites[this.round % sprites.length];
       this.reset();
     }
   }
