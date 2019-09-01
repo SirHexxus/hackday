@@ -69,3 +69,31 @@ Make sure you are comfortable with Object-Oriented JavaScript:
 - What is `this`? What does it refer to and how is it used in different contexts (i.e., in a constructor function, a method, etc.)?
 - How do you add a property or method to a constructor's prototype?
 - What is prototypal inheritance and how is it implemented?
+
+
+### How To Play
+Use the arrow/WASD keys to move the sprite around the field.
+Try to get your sprite to the top of the screen without coliding with any enemies.
+  If you collide with any enemies
+    Lose one life, and restart at the bottom row
+    If you lose all lives
+      Game Over
+  Once there, that space is taken up.
+Fill All top row spaces to beat the level.
+
+### Languages and Resources Used
+HTML
+CSS
+Vanilla Javascript
+
+### Future Plans
+- Add obstacles and power-ups, dependent on Level
+- Increasing Difficulty, dependent on level
+- 
+
+### Participants
+- James Stacy
+- Rebecca Hom
+- Tyrice Clark
+- Spencer Trumbore
+- Justin Teeter
