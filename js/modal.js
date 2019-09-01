@@ -1,8 +1,8 @@
 function Modal(overlay, anchorElement) {
+  var modalContent = document.querySelector(".modal-content");
     this.overlay = overlay;
     this.anchorElement = anchorElement;
     this.open = function(content) {
-      var modalContent = document.querySelector(".modal-content");
       modalContent.innerHTML = content;
       this.overlay.classList.remove('is-hidden');
       this.overlay.style.top = this.anchorElement.offsetTop + 'px';
@@ -13,5 +13,6 @@ function Modal(overlay, anchorElement) {
   
     this.close = function() {
       this.overlay.classList.add('is-hidden');
+      modalContent.innerHTML = "";
     }
 }

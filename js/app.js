@@ -1,19 +1,5 @@
-//Game State Manager
-
-class Game {
-  constructor() {
-    this.state = [
-      "startMenu",
-      "round01",
-      "round02",
-      "round03",
-      "round04",
-      "round05"
-    ]
-  }
-}
-
 const occupied = [];
+const game = new Game();
 
 const player = new Player();
 
@@ -42,7 +28,10 @@ document.addEventListener("keyup", function (e) {
       
     83: "down",
     40: "down",
+
+    13: "enter"
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
+  game.handleInput(allowedKeys[e.keyCode])
 });
