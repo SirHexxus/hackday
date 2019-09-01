@@ -70,7 +70,7 @@ body {
       font-size: 48px;
   }
 
-  .retry-btn {
+  #retry-btn {
       background-color: #8888ff;
       color: #fff;
       max-width: 160px;

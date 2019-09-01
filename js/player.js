@@ -55,8 +55,7 @@ class Player extends Populate {
         this.reset();
 
         if (this.lives === 0) {
-          //Show game over screen
-          alert("Game over");
+          game.modal.open(screenTemplates.gameOver);
         }
       }
     }
