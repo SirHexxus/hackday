@@ -9,7 +9,7 @@ body {
     flex-direction: row;
 }
 
-#life-counter-container {
+#life-counter-container, #score-counter-container, #character-profile-container   {
     border: 1px solid black;
     flex: 1;
     font-family: Arial, Helvetica, sans-serif;

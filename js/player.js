@@ -64,9 +64,12 @@ class Player extends Populate {
     if (occupied.indexOf(this.x) < 0 && this.y === 0) {
       occupied.push(this.x);
       this.round++;
+      document.getElementById("round-counter").innerText = (this.round + 1);
+      document.getElementById("games-won").innerText = (this.round / sprites.length);
+
       this.sprite = sprites[this.round % sprites.length];
       this.reset();
-      
+
       if(occupied.length === sprites.length) {
         game.state.levelComplete = true;
         game.modal.open(screenTemplates.newLevel);
