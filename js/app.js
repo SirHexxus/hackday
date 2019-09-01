@@ -13,6 +13,7 @@ class Game {
   }
 }
 
+const occupied = [];
 
 const player = new Player();
 
