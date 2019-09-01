@@ -42,7 +42,7 @@ document.addEventListener("keyup", function (e) {
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
-  game.handleInput(allowedKeys[e.keyCode])
+  game.handleInput(allowedKeys[e.keyCode]);
 });
 
 document.addEventListener("click", function (e) {

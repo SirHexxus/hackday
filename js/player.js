@@ -66,6 +66,11 @@ class Player extends Populate {
       this.round++;
       this.sprite = sprites[this.round % sprites.length];
       this.reset();
+      
+      if(occupied.length === sprites.length) {
+        game.state.levelComplete = true;
+        game.modal.open(screenTemplates.newLevel);
+      }
     }
   }
 }
