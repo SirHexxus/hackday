@@ -1,6 +1,16 @@
+const occupied = [];
+const sprites =  [
+  "images/char-boy.png",
+  "images/char-cat-girl.png",
+  "images/char-horn-girl.png",
+  "images/char-pink-girl.png",
+  "images/char-princess-girl.png"
+];
+
+
 const game = new Game();
 
-const player = new Player();
+let player = new Player();
 
 //Array to hold Enemy objects
 const allEnemies = [];
@@ -32,5 +42,14 @@ document.addEventListener("keyup", function (e) {
   };
 
   player.handleInput(allowedKeys[e.keyCode]);
-  game.handleInput(allowedKeys[e.keyCode])
+  game.handleInput(allowedKeys[e.keyCode]);
+});
+
+document.addEventListener("click", function (e) {
+  e.preventDefault();
+  if(e.target && e.target.id== 'retry-btn'){
+    game.modal.close();
+    occupied.splice(0, occupied.length);
+    player = new Player();
+  }
 });

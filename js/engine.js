@@ -96,7 +96,8 @@ var Engine = (function (global) {
         "images/stone-block.png",   // Row 2 of 3 of stone
         "images/stone-block.png",   // Row 3 of 3 of stone
         "images/grass-block.png",   // Row 1 of 2 of grass
-        "images/grass-block.png"    // Row 2 of 2 of grass
+        "images/grass-block.png",   // Row 2 of 2 of grass
+        "images/Selector.png"       // Special occupied space :)
       ],
       numRows = 6,
       numCols = 5,
@@ -119,6 +120,10 @@ var Engine = (function (global) {
          * we're using them over and over.
          */
         ctx.drawImage(Resources.get(rowImages[row]), col * 101, row * 83);
+
+        if((occupied.indexOf(101 * col) < 0) && row === 0) {
+          ctx.drawImage(Resources.get(rowImages[rowImages.length - 1]), col * 101, row * 83);
+        }
       }
     }
 
@@ -148,7 +153,8 @@ var Engine = (function (global) {
     "images/char-horn-girl.png",
     "images/char-pink-girl.png",
     "images/char-princess-girl.png",
-    "images/Star.png"
+    "images/Star.png",
+    "images/Selector.png"
   ]);
   Resources.onReady(init);
 

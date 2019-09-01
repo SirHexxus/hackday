@@ -9,7 +9,7 @@ body {
     flex-direction: row;
 }
 
-#life-counter-container {
+#life-counter-container, #score-counter-container, #character-profile-container   {
     border: 1px solid black;
     flex: 1;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,7 +70,7 @@ body {
       font-size: 48px;
   }
 
-  .retry-btn {
+  #retry-btn {
       background-color: #8888ff;
       color: #fff;
       max-width: 160px;

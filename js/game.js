@@ -2,6 +2,7 @@
 class Game {
     state = {
         hasBegun: false,
+        levelComplete: false
     };
 
     setModal(modal) {
@@ -14,6 +15,13 @@ class Game {
             this.modal.close();
             this.state.hasBegun = true;
         }
+
+        if (this.state.levelComplete) {
+            this.modal.close();
+            this.state.levelComplete = false;
+            occupied.splice(0, occupied.length);
+        }
     }
+   
   }
 }
