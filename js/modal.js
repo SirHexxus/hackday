@@ -14,11 +14,4 @@ function Modal(overlay, anchorElement) {
     this.close = function() {
       this.overlay.classList.add('is-hidden');
     }
-    const closeButton = overlay.querySelector('.button-close')
-    closeButton.addEventListener('click', this.close.bind(this));
-    overlay.addEventListener('click', e => {
-      if (e.srcElement.id === this.overlay.id) {
-        this.close();
-      }
-    });
 }
